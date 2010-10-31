@@ -1,0 +1,89 @@
+<!doctype html> 
+<html>
+<head>
+  <title>jQuery Transitions demo</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style>
+    #list-of-tiles {
+      margin: 0 auto;
+      padding: 0;
+      max-width: 225px;
+      overflow: hidden;
+    }
+    
+    #list-of-tiles li {
+      float: left;
+      height: 40px;
+      width: 40px;
+      overflow: hidden;
+      margin: 0 5px 5px 0;
+      background: #f90;
+      color: #fff;
+      font: 36px/1 serif;
+      line-height: 40px;
+      text-align: center;
+      cursor: pointer;
+      display: none;
+    }
+    #list-of-tiles li:nth-child(2n) {
+      background: #009;
+    }
+    #list-of-tiles li:nth-child(3n) {
+      background: #3f0;
+    }
+    #list-of-tiles li:nth-child(4n) {
+      background: #c09;
+    }
+    #list-of-tiles li:nth-child(5n) {
+      background: #09f;
+    }
+    #list-of-tiles li:hover {
+      background: gray;
+    }
+    #list-of-tiles li:active {
+      background: #000;
+    }
+    
+    
+    #tile-count {
+      font-family: monospace;
+    }
+    
+  </style>
+  
+  
+</head>
+<body>
+  
+  <h1>jQuery Transitions demo</h1>
+  
+  <p>
+    Choose a tile count and click "Start" to see a tiling effect using a recursive callback
+  </p>
+  
+  <div>
+    <form id="tile-control">
+    <select id="tile-count">
+      <option selected="selected">Tile count:</option>
+      <option value="5">&nbsp;5 tiles</option>
+      <option value="10">10 tiles</option>
+      <option value="20">20 tiles</option>
+      <option value="50">50 tiles</option>
+    </select>
+    <input id="tile-button" type="submit" value="Start" />    
+    </form>
+  
+    
+    <ul id="list-of-tiles">
+      
+      
+    </ul>
+    
+  </div>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
+  <script src="cb.transition.js"></script>
+  <script src="demo.js"></script>
+
+</body>
+</html>
