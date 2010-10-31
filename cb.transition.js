@@ -5,7 +5,6 @@ var cb = cb || {};
         direction = 1,  // 1 = forward; -1 = backward
         sequence,
         sequencer,
-        callback,
         reset = function() {
           sIndex = 0;
           direction = 1;
